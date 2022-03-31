@@ -6,10 +6,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
 
+
 public class BussTest {
 
     private Bus bus;
-    Passenger passenger1;
+    private Passenger passenger1;
+
     @BeforeEach
     void setup(){
         bus = new Bus();

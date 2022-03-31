@@ -7,6 +7,17 @@
     <groupId>se.koarito</groupId>
     <artifactId>TDD-SlutProject</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
@@ -20,6 +31,12 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-surefire-provider</artifactId>
+        <version>1.2.0</version>
+    </dependency>
     </dependencies>
 
     <properties>
