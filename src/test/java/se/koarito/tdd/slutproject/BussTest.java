@@ -1,12 +1,12 @@
 package se.koarito.tdd.slutproject;
 
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.testng.Assert;
 
-//Amir
+
 public class BussTest {
 
     private Bus bus;
@@ -22,7 +22,7 @@ public class BussTest {
     @Test
     public void testAdd(){
         bus.addPassenger(passenger1);
-        Assert.assertTrue(bus.getPassengers().contains(passenger1));
+        Assertions.assertTrue(bus.getPassengers().contains(passenger1));
     }
 
     @DisplayName("En passagerare kliver av")
@@ -30,7 +30,7 @@ public class BussTest {
     public void removePassenger(){
         bus.addPassenger(passenger1);
         bus.removePassenger(passenger1);
-        Assert.assertFalse(bus.getPassengers().contains(passenger1));
+        Assertions.assertFalse(bus.getPassengers().contains(passenger1));
     }
 
     @DisplayName("Test för att se ifall maxkapaciteten inte kan överskridas")
@@ -38,6 +38,6 @@ public class BussTest {
     public void testMax(){
     for(int i = 0; i < 21; i++)
         bus.addPassenger(passenger1);
-    Assert.assertEquals(bus.getPassengers().size(), 20);
+    Assertions.assertEquals(bus.getPassengers().size(), 20);
     }
 }
